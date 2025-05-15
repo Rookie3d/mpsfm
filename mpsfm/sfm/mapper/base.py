@@ -27,7 +27,8 @@ class MpsfmMapper(BaseClass):
         },
     }
     del colmap_options["image_selection_method"]
-
+    del colmap_options["image_names"]
+    
     default_conf = {
         "verbose": 0,
         "dataset": {},
