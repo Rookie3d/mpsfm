@@ -16,7 +16,7 @@ gdown
 
 # -- Extraction --
 # LightGlue
-lightglue git+https://github.com/cvg/LightGlue
+lightglue @ git+https://github.com/cvg/LightGlue
 
 # Metric3Dv2
 mmcv
