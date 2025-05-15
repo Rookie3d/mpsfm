@@ -50,7 +50,10 @@ class BaseModel(nn.Module, metaclass=ABCMeta):
         elif self.conf.download_method == "wget":
             print(f"📥 Downloading via wget: {self.conf.download_url}")
             subprocess.run(
-                ["wget", self.conf.download_url, "-O", model_path], stdout=sys.stdout, stderr=sys.stderr, check=True
+                ["wget", self.conf.download_url, "-O", str(model_path)], # Pass model_path as string
+                # stdout=sys.stdout, # Removed
+                # stderr=sys.stderr, # Removed
+                check=True
             )
         else:
             raise ValueError(f"Unknown download method: {self.conf.download_method}")
